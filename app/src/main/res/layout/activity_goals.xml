@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- We'll embed a vertical LinearLayout inside the ConstraintLayout to preserve form layout -->
+        <LinearLayout
+            android:id="@+id/formContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Title Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Your Fitness Goals"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"/>
+
+            <!-- Experience Level RadioGroup -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Your Gym Experience Level"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbBeginner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Beginner" />
+
+                <RadioButton
+                    android:id="@+id/rbIntermediate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Intermediate" />
+
+                <RadioButton
+                    android:id="@+id/rbAdvanced"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Advanced" />
+            </RadioGroup>
+
+            <!-- Activity Level -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Your Activity Level"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgActive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbLow"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Lightly Active" />
+
+                <RadioButton
+                    android:id="@+id/rbMedium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Active" />
+
+                <RadioButton
+                    android:id="@+id/rbHigh"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Highly Active" />
+            </RadioGroup>
+
+            <!-- Goals -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Your Fitness Goals"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <CheckBox android:id="@+id/cbWeightLoss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weight Loss" />
+            <CheckBox android:id="@+id/cbMuscleGain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Muscle Gain" />
+            <CheckBox android:id="@+id/cbStrength" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Strength" />
+            <CheckBox android:id="@+id/cbEndurance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Endurance" />
+
+            <!-- Age Group Spinner -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Select Your Age Group" android:textSize="16sp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+            <Spinner android:id="@+id/spinnerAgeGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:spinnerMode="dropdown" android:entries="@array/age_groups" />
+
+            <!-- Weight & Height Inputs -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Enter Your Weight and Height" android:textSize="16sp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+            <EditText android:id="@+id/etWeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Weight (kg)" android:inputType="numberDecimal" />
+            <EditText android:id="@+id/etHeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Height (cm)" android:inputType="numberDecimal" />
+
+            <!-- Gender Selection -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Select Your Gender" android:textSize="16sp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+            <RadioGroup android:id="@+id/rgSex" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <RadioButton android:id="@+id/rbMale" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Male" />
+                <RadioButton android:id="@+id/rbFemale" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Female" />
+                <RadioButton android:id="@+id/rbOther" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Other" />
+            </RadioGroup>
+
+            <!-- Submit Button -->
+            <Button android:id="@+id/btnSubmitGoals" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Submit Goals" android:textSize="18sp" android:layout_marginTop="24dp" android:backgroundTint="@color/colorAccent" android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">gymApp</string>
+    <string name="back">Back</string>
+    <string name="logout">Logout</string>
+    <string name="activity_level_title">Select Your Activity Level</string>
+    <string name="low">Beginner (0-6 months)</string>
+    <string name="medium">Intermediate (6-12 months)</string>
+    <string name="high">Advanced (1+ years)</string>
+    <string name="experience_level_title">Select Your Experience Level</string>
+    <string name="goals_title">Select Your Goals</string>
+    <string name="beginner">Beginner (0-6 months)</string>
+    <string name="intermediate">Intermediate (6-12 months)</string>
+    <string name="advanced">Advanced (1+ years)</string>
+    <string name="weight_loss">Weight Loss</string>
+    <string name="muscle_gain">Muscle Gain</string>
+    <string name="strength">Strength Training</string>
+    <string name="endurance">Endurance Improvement</string>
+    <string name="complete_profile">Complete Profile</string>
+    <string-array name="age_groups">
+        <item>Under 18</item>
+        <item>18-24</item>
+        <item>25-34</item>
+        <item>35-44</item>
+        <item>45-54</item>
+        <item>55-64</item>
+        <item>65+</item>
+    </string-array>
+</resources>

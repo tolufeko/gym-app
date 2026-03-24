@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gymapp.ui.HomeFragment"
+        android:label="Home"/>
+        
+    <fragment
+        android:id="@+id/logWorkoutFragment"
+        android:name="com.example.gymapp.ui.LogWorkoutFragment"
+        android:label="Log Workout" />
+
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.example.gymapp.ui.WorkoutFragment"
+        android:label="Workouts"/>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.gymapp.ui.ProfileFragment"
+        android:label="Profile"/>
+    
+    <argument
+        android:name="templateName"
+        app:argType="string"
+        android:defaultValue="" />
+
+</navigation>
